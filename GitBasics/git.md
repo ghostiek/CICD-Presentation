@@ -106,12 +106,19 @@ Origin is the remote's default name but you may rename it to whatever you see fi
 
 When working in a real project, you cannot merge your branch locally and push to main, that's a receipe for disaster, there will often be restrictions disallowing such an operation in the first place. The proper way to modify the main branch is to make a Pull Request. If I modify the development branch, make a commit and then push, once I open up github it will tell me that my branch is 1 commit ahead of master and suggest I make a Pull Request. A pull request is a way for me to merge the branch I have been working on with another. We may modify the targer branch to any other, in this example we will use main. Once the Pull Request is made collaborators may discuss it and suggest changes, once you get approval from your peers it may be approved and the branch will be merged into main.
 
-Say coworker 1 added in a new feature, which got pushed to the main branch when we were still working on our development branch.
+This is the ideal case scenario. But sometimes things get a little messy.
 
 
-Now imagine some other collaborator made a commit and we want our local code to be up to date. We simply run `git pull` to modify our local repository based on the changes remote has undergone.
 
-Sometimes we aren't as lucky and changes get made to the remote branch before we could make a pull and we now have merge conflicts.
+## Merge conflicts and how to resolve them
+
+Say coworker 1 added in a new feature, which got pushed to the main branch when we were still working on our development branch. We unfortunately modified the same lines of code and git now doesn't know which lines to keep.
+
+We may go on the PR, and click on the resolve conflicts button.
+
+This might seem a little confusing at first but it's much more straightforward than it seems. This `<<<<<<< branch_name_1` and everything below until we hit `=======` represents the changes made by our branch, everything below the equal sign until `>>>>>>> master` represents the remote main branch code.
+
+To resolve this conflict, modify the file by keeping or removing whatever changes make sense. In this case I want to remove my coworkers work for my optimized line of code. We then mark it as resolved and commit merge. Our merge is finally successful and we may discuss it in more details before completing our PR.
 
 
 
