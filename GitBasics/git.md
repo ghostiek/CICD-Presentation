@@ -27,9 +27,21 @@ If you wish to do so using a GUI, I would recommend
 ## Lets get started
 
 
-If we want to create a git repo locally, we can run
-
-`git init`
+If we want to create a git repo locally, we can run `git init`
   
-We can see it created a hidden folder, and our CLI is now aware we 
+We can see it created a hidden folder, and our CLI is now aware we are currently in one.
+
+We can now either manually add a file or run `touch hello.txt` to create one.
+
+We can now run `git add hello.txt` to add the file to our staging area.
+
+We can now commit our file in the staging area to the repository by running `git commit -m "Input any message to explain changes made"`
+
+Here the -m parameter followed by whatever string you please, is the message the commit will have.
+
+We can check out what the commits we have made by running `git log` (Note if you have a large commit history you can exit this by typing `q` instead of scrolling all the way down)
+
+
+
+
 
