@@ -39,7 +39,7 @@ We can now run `git add hello.txt` to add the file to our staging area.
 
 We can now commit our file in the staging area to the repository by running `git commit -m "Input any message to explain changes made"`
 
-Here the -m parameter followed by whatever string you please, is the message the commit will have.
+Here the -m parameter indicates that the string that follows will is the message the commit will have.
 
 We can check out what the commits we have made by running `git log` (Note if you have a large commit history you can exit this by typing `q` instead of scrolling all the way down)
 
@@ -62,7 +62,7 @@ Git doesn't only track new files, it tracks modifications of its contents. So ru
 
 So lets add this to the staging area, as well and commit it! `git add .` followed by `git commit -m "Made 2 new files and modified hello.txt"`
 
-We can also undo commits by running `git reset [commit id]` this will preserve our changes onto our local working directory. If we wish to really change all the files to exactly what they were when the commit happened we run `git reset --hard [commit id]`. If we want to go back one commit and don't feel like getting the id we can use `git reset HEAD~1`. You may modify the 1 to any number to specify any number of commits before the current one.
+We can also delete all commits past a certain commit id by running `git reset [commit id]` this will preserve our changes onto our local working directory. If we wish to really change all the files to exactly what they were when the commit happened we run `git reset --hard [commit id]`. If we want to go back one commit and don't feel like getting the id we can use `git reset HEAD~1`. You may modify the 1 to any number to specify any number of commits before the current one.
 
 ### What if there's sensitive or useless data we never want to commit and share?
 
@@ -80,11 +80,11 @@ Lets create another one `git branch whoopsies`, see that it was created using `g
 
 To actually switch branches you need to run `git checkout development`. Now any changes we make on this branch will leave our main branch unaffected.
 
-We can test this. `touch experimental_work.py`, `git add .`, `git commit -m "Adding new python script"`. We can see in `git log` and running `ls` (our working directory) that things have changed. We can even run `git diff main` to see that the branches do differ!
+We can test this. `touch experimental_work.py`, `git add .`, `git commit -m "Adding new python script"`. We can see in `git log` and running `ls` (our working directory) that things have changed. We can even run `git diff main` to see all the changes between the two branches.
 
-Lets do a sanity check and revert back to main. `git checkout main` and then run `git log` and `ls` we see that none of the changes happened!
+Lets do a sanity check and switch branches back to main. `git checkout main` and then run `git log` and `ls` we see that none of the changes happened!
 
-Lets say our work looks good and we are now interested in modifying the code on our main branch locally. We can merge as such. `git merge development`.
+Lets say our work on the development branch looks good and we are now interested in implementing our changes into the local main branch. We can merge as such. `git merge development`.
 
 Now we can see running `git log` that those changes did get made on our main branch.
 
@@ -93,6 +93,8 @@ Now we can see running `git log` that those changes did get made on our main bra
 We have been able to keep a history of all changes made locally and that's great but in order to share our code we will need to push our code to a remote repository.
 
 ## Working with Remote Repositories
+
+First, lets rename our master branch to main. By default `git init` names it master, but since I wrote this entire tutorial mentioning the `main` branch we will be renaming the branch by running `git branch -m master main`.
 
 We will be using github to host our remote repository. So we go to the `+` sign on our account and create a new repository. We then follow the very simple instructions. Since we already did most of it we will simply run `git remote add origin git@github.com:ghostiek/test.git` to tell our git repo that we need to modify code in this location.
 
