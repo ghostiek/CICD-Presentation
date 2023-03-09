@@ -70,9 +70,9 @@ Lets create another one `git branch whoopsies`, see that it was created using `g
 
 To actually switch branches you need to run `git checkout development`. Now any changes we make on this branch will leave our main branch unaffected.
 
-We can test this. `touch experimental_work.py`, `git add .`, `git commit -m "Adding new python script"`. We can see in `git log` and running `ls` (our working directory) that things have changed.
+We can test this. `touch experimental_work.py`, `git add .`, `git commit -m "Adding new python script"`. We can see in `git log` and running `ls` (our working directory) that things have changed. We can even run `git diff main` to see that the branches do differ!
 
-However when we revert back to main. `git checkout main` and run `git log` and `ls` none of the changes happened!
+Lets do a sanity check and revert back to main. `git checkout main` and then run `git log` and `ls` we see that none of the changes happened!
 
 Lets say our work looks good and we are now interested in modifying the code on our main branch locally. We can merge as such. `git merge development`.
 
