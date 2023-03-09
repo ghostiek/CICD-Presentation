@@ -44,7 +44,7 @@ Here the -m parameter followed by whatever string you please, is the message the
 We can check out what the commits we have made by running `git log` (Note if you have a large commit history you can exit this by typing `q` instead of scrolling all the way down)
 
 
-But what if we want to add more than 1 file?
+### But what if we want to add more than 1 file?
 
 Lets create 2 new files `touch file1.txt` and `touch file2.txt`
 
