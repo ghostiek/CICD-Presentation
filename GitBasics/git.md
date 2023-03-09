@@ -56,11 +56,13 @@ Now to see that everything is indeed tracked we run `git status`
 
 When running `git commit` it is important to note that ONLY staged files will be commited.
 
-We can also undo commits by running `git reset [commit id]` this will preserve our changes onto our local working directory. If we wish to really change all the files to exactly what they were when the commit happened we run `git reset --hard [commit id]`. If we want to go back one commit and don't feel like getting the id we can use `git reset HEAD~1`. You may modify the 1 to any number to specify any number of commits before the current one.
+
 
 Git doesn't only track new files, it tracks modifications of its contents. So running `nano hello.txt` and modifying the contents and running `git status` will tell us that some file was modified.
 
 So lets add this to the staging area, as well and commit it! `git add .` followed by `git commit -m "Made 2 new files and modified hello.txt"`
+
+We can also undo commits by running `git reset [commit id]` this will preserve our changes onto our local working directory. If we wish to really change all the files to exactly what they were when the commit happened we run `git reset --hard [commit id]`. If we want to go back one commit and don't feel like getting the id we can use `git reset HEAD~1`. You may modify the 1 to any number to specify any number of commits before the current one.
 
 ## Working with branches
 
