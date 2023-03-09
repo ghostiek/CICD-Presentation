@@ -120,7 +120,7 @@ This might seem a little confusing at first but it's much more straightforward t
 
 To resolve this conflict, modify the file by keeping or removing whatever changes make sense. In this case I want to remove my coworkers work for my optimized line of code. We then mark it as resolved and commit merge. Our merge is finally successful and we may discuss it in more details before completing our PR.
 
-
+Once a PR is completed, it is common practice to delete the branch you were working on, and if a new feature needs to be made you may now branch off main.
 
 
 
