@@ -82,6 +82,22 @@ Lets say our work looks good and we are now interested in modifying the code on 
 
 Now we can see running `git log` that those changes did get made on our main branch.
 
+## What we have done so far
+
+We have been able to keep a history of all changes made locally and that's great but in order to share our code we will need to push our code to a remote repository.
+
+## Working with Remote Repositories
+
+We will be using github to host our remote repository. So we go to the `+` sign on our account and create a new repository. We then follow the very simple instructions. Since we already did most of it we will simply run `git remote add origin git@github.com:ghostiek/test.git` to tell our git repo that we need to modify code in this location.
+
+We can inspect our remote using `git remote show origin`
+
+And to push our code to remote we run `git push -u origin main`. This will push our main branch into the remote repository. We add the -u flag to make it so that the next time we want to push to remote we can just run `git push`. If we want to add all branches to the remote repo then we run `git push origin --all`
+
+Origin is the remote's default name but you may rename it to whatever you see fit with `git remote rename old_remote_name new_remote_name`
+
+
+
 
 
 
