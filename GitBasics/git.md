@@ -26,8 +26,10 @@ If you wish to do so using a GUI, I would recommend
 
 ## Lets get started
 
+### We start by creating and modifying a repository locally
 
-If we want to create a git repo locally, we can run `git init`
+
+To create a git repo locally, we can run `git init`
   
 We can see it created a hidden folder, and our CLI is now aware we are currently in one.
 
@@ -40,6 +42,27 @@ We can now commit our file in the staging area to the repository by running `git
 Here the -m parameter followed by whatever string you please, is the message the commit will have.
 
 We can check out what the commits we have made by running `git log` (Note if you have a large commit history you can exit this by typing `q` instead of scrolling all the way down)
+
+
+But what if we want to add more than 1 file?
+
+Lets create 2 new files `touch file1.txt` and `touch file2.txt`
+
+We can run `git status` to see that git noticed we have 2 files that are untracked!
+
+Lets add all untracked files instead of doing it one by one with `git add .`
+
+Now to see that everything is indeed tracked we run `git status`
+
+When running `git commit` it is important to note that ONLY staged files will be commited.
+
+Git doesn't only track new files, it tracks modifications of its contents. So running `nano hello.txt` and modifying the contents and running `git status` will tell us that some file was modified.
+
+So lets add this to the staging area, as well and commit it! `git add .` followed by `git commit -m "Made 2 new files and modified hello.txt"
+
+
+
+
 
 
 
