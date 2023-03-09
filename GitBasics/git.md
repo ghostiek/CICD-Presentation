@@ -102,14 +102,16 @@ And to push our code to remote we run `git push -u origin main`. This will push 
 
 Origin is the remote's default name but you may rename it to whatever you see fit with `git remote rename old_remote_name new_remote_name`
 
+## Making a Pull Request
+
+When working in a real project, you cannot merge your branch locally and push to main, that's a receipe for disaster, there will often be restrictions disallowing such an operation in the first place. The proper way to modify the main branch is to make a Pull Request. If I modify the development branch, make a commit and then push, once I open up github it will tell me that my branch is 1 commit ahead of master and suggest I make a Pull Request. A pull request is a way for me to merge the branch I have been working on with another. We may modify the targer branch to any other, in this example we will use main. Once the Pull Request is made collaborators may discuss it and suggest changes, once you get approval from your peers it may be approved.
+
+Say coworker 1 added in a new feature, which got pushed to the main branch when we were still working on our development branch.
+
+
 Now imagine some other collaborator made a commit and we want our local code to be up to date. We simply run `git pull` to modify our local repository based on the changes remote has undergone.
 
 Sometimes we aren't as lucky and changes get made to the remote branch before we could make a pull and we now have merge conflicts.
-
-## Resolving merge conflicts
-
-Say coworker 1 added in a new feature, which got pushed to master when we were still working on our development branch.
-
 
 
 
