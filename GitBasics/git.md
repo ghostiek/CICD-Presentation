@@ -122,6 +122,11 @@ To resolve this conflict, modify the file by keeping or removing whatever change
 
 Once a PR is completed, it is common practice to delete the branch you were working on, and if a new feature needs to be made you may now branch off main.
 
+## What if I want to contribute to other projects?
+
+You may fork their repository and then clone your new remote repository using `git clone https://github.com/ghostiek/antigravity.git`. And with the knowledge you now have you know how to make changes, put them in the stage area, make a commit, push them to your remote. Finally, you may head to the original repo and make a PR to merge your fork into the main one. Remember to follow proper etiquette the repo has set.
+
+
 
 
 
