@@ -24,9 +24,9 @@ If you wish to do so using a GUI, I would recommend
 [Git Kraken](https://www.gitkraken.com/) (requires a license past the 1 week free trial)
 
 
-## Lets get started
+## Lets get started!
 
-### We start by creating and modifying a repository locally
+## We start by creating and modifying a repository locally
 
 
 To create a git repo locally, we can run `git init`
@@ -58,7 +58,28 @@ When running `git commit` it is important to note that ONLY staged files will be
 
 Git doesn't only track new files, it tracks modifications of its contents. So running `nano hello.txt` and modifying the contents and running `git status` will tell us that some file was modified.
 
-So lets add this to the staging area, as well and commit it! `git add .` followed by `git commit -m "Made 2 new files and modified hello.txt"
+So lets add this to the staging area, as well and commit it! `git add .` followed by `git commit -m "Made 2 new files and modified hello.txt"`
+
+## Working with branches
+
+The project is starting to get a bit more crowded and if you have multiple colaborators it would make sense for there to be a development branch and a main copy of the repository.
+
+We can create a copy of the current branch by running `git branch development`. The new branch name is development and we can see all our current branches by running `git branch --list` or shorthand `git branch -l`. 
+
+Lets create another one `git branch whoopsies`, see that it was created using `git branch -l`. You may delete that branch by running `git branch -d whoopsies` and for a sanity check see that its gone by running `git branch -l`
+
+To actually switch branches you need to run `git checkout development`. Now any changes we make on this branch will leave our main branch unaffected.
+
+We can test this. `touch experimental_work.py`, `git add .`, `git commit -m "Adding new python script"`. We can see in `git log` and running `ls` (our working directory) that things have changed.
+
+However when we revert back to main. `git checkout main` and run `git log` and `ls` none of the changes happened!
+
+Lets say our work looks good and we are now interested in modifying the code on our main branch locally. We can merge as such. `git merge development`.
+
+Now we can see running `git log` that those changes did get made on our main branch.
+
+
+
 
 
 
