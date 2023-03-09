@@ -124,7 +124,7 @@ Once a PR is completed, it is common practice to delete the branch you were work
 
 ## What if I want to contribute to other projects?
 
-You may fork their repository and then clone your new remote repository using `git clone https://github.com/ghostiek/antigravity.git`. And with the knowledge you now have you know how to make changes, put them in the stage area, make a commit, push them to your remote. Finally, you may head to the original repo and make a PR to merge your fork into the main one. Remember to follow proper etiquette the repo has set.
+You may fork their repository and then clone your new remote repository to your local machine using `git clone https://github.com/ghostiek/antigravity.git`. And with the knowledge you now have you know how to make changes, put them in the stage area, make a commit, push them to your remote. Finally, you may head to the original repo and make a PR to merge your fork into the main one. Remember to follow proper etiquette the repo has set.
 
 
 
