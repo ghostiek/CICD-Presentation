@@ -26,6 +26,17 @@ If you wish to do so using a GUI, I would recommend
 
 ## Lets get started!
 
+Something to keep in mind with Git are the 3 main states. Your files can either be modified, staged or committed.
+
+- Modified means that you have changed the file but have not committed it to your database yet.
+- Staged means that you have marked a modified file in its current version to go into your next commit snapshot.
+- Committed means that the data is safely stored in your local database.
+
+It'll make more sense once we actually start the demo. But here's a good view of what we are about to go over.
+
+![Stages of Git](https://git-scm.com/book/en/v2/images/areas.png)
+
+
 ## We start by creating and modifying a repository locally
 
 
