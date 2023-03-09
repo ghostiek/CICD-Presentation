@@ -64,6 +64,12 @@ So lets add this to the staging area, as well and commit it! `git add .` followe
 
 We can also undo commits by running `git reset [commit id]` this will preserve our changes onto our local working directory. If we wish to really change all the files to exactly what they were when the commit happened we run `git reset --hard [commit id]`. If we want to go back one commit and don't feel like getting the id we can use `git reset HEAD~1`. You may modify the 1 to any number to specify any number of commits before the current one.
 
+### What if there's sensitive or useless data we never want to commit and share?
+
+We can create a file named `.gitignore`. Normally we would copy paste in it whatever useless files R/Python/Pycharm/VSCode/RStudio or other tools may generate. You may find the full list of templates [here](https://github.com/github/gitignore).
+
+However it is also useful to be able to modify it yourself. If we created a data directory as such `mkdir data` and we had very private info there. `nano data/secret_keys.txt`. We can add `data/` to our `.gitignore` to never track that directory. We can also ignore specific files and there's also tons of patterns you can create but I won't go deeper into that because there's already too much to cover. If you want to learn about what else you can ignore feel free to read [the docs on .gitignore](https://git-scm.com/docs/gitignore)
+
 ## Working with branches
 
 The project is starting to get a bit more crowded and if you have multiple colaborators it would make sense for there to be a development branch and a main copy of the repository.
@@ -96,6 +102,13 @@ And to push our code to remote we run `git push -u origin main`. This will push 
 
 Origin is the remote's default name but you may rename it to whatever you see fit with `git remote rename old_remote_name new_remote_name`
 
+Now imagine some other collaborator made a commit and we want our local code to be up to date. We simply run `git pull` to modify our local repository based on the changes remote has undergone.
+
+Sometimes we aren't as lucky and changes get made to the remote branch before we could make a pull and we now have merge conflicts.
+
+## Resolving merge conflicts
+
+Say coworker 1 added in a new feature, which got pushed to master when we were still working on our development branch.
 
 
 
