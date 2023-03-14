@@ -129,6 +129,11 @@ This is the ideal case scenario. But sometimes things get a little messy.
 
 Say coworker 1 added in a new feature, which got pushed to the main branch when we were still working on our development branch. We unfortunately modified the same lines of code and git now doesn't know which lines to keep.
 
+How to create a mock merge conflict:
+1) Go to main and modify hello.txt to any new string
+2) Go to development and modify hello.txt to a different string
+3) Try to make a PR from development to main
+
 We may go on the PR, and click on the resolve conflicts button.
 
 This might seem a little confusing at first but it's much more straightforward than it seems. This `<<<<<<< branch_name_1` and everything below until we hit `=======` represents the changes made by our branch, everything below the equal sign until `>>>>>>> master` represents the remote main branch code.
